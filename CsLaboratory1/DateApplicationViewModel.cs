@@ -63,8 +63,8 @@ namespace CsLaboratory1
             IsEnabled = false;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsEnabled"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("LoaderVisibility"));
-            _user = new DateOfBirth(ref _chosenDate);
             await Task.Run(() => Thread.Sleep(1500));
+            _user = new DateOfBirth(ref _chosenDate);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Age"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ZodiacWestern"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ZodiacChinese"));
